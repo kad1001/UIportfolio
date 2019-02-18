@@ -2,4 +2,70 @@
   color: #F6A1A5;
 }
 
+.red {
+  color: #EA7580;
+}
+
+.blue {
+  color: #088BBE;
+}
+
+.green {
+  color: #1BB6AF;
+}
+
+.orange {
+  color: #F8CD9C;
+}
+
+.job {
+  color: #172869;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.school {
+  color: #088BBE;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#name {
+  color: #1BB6AF;
+  font-size: 50px;
+  font-weight: bold;
+  /* float: right; */
+}
+
+.top {
+  width: 100%;
+  background-color: black;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.head {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  /* font-family: 'Khand', sans-serif; */
+}
+
+.projects {
+  background-color: #F6A1A5;
+}
+
+.header {
+color: white;
+font-size: 50px;
+text-align: center;
+}
+
+.link {
+  font-size: 25px;
+}
+
+.contact {
+  background-color: #EA7580;
+}
 /*# sourceMappingURL=style.css.map */
