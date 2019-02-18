@@ -18,6 +18,10 @@
   color: #F8CD9C;
 }
 
+.violet {
+  color: #172869;
+}
+
 .job {
   color: #172869;
   font-size: 20px;
@@ -31,7 +35,7 @@
 }
 
 #name {
-  color: #1BB6AF;
+  color: #088BBE;
   font-size: 50px;
   font-weight: bold;
   /* float: right; */
@@ -40,7 +44,7 @@
 .top {
   width: 100%;
   background-color: black;
-  padding-top: 10%;
+  padding-top: 2%;
   text-align: center;
 }
 
@@ -48,6 +52,7 @@
   color: white;
   font-size: 50px;
   font-weight: bold;
+  /* margin-top: 20%; */
   /* font-family: 'Khand', sans-serif; */
 }
 
@@ -67,5 +72,10 @@ text-align: center;
 
 .contact {
   background-color: #EA7580;
+}
+
+.social {
+  float: right; 
+  padding-right: 4%;
 }
 /*# sourceMappingURL=style.css.map */

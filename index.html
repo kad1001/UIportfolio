@@ -7,7 +7,11 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/style.css">
 
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
     <!-- bulma -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
@@ -19,11 +23,23 @@
 </head>
 <body>
     <div class="top">
+        <div class="social">
+            <a href="https://github.com/kad1001">
+            <i class="fab fa-github icon red is-medium"></i>
+            </a>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
+            <i class="fab fa-linkedin icon green is-medium"></i>
+            </a>
+        </div>
+
+
         <div class="columns is-flex">
-        <div class="column">
+        <div class="column" style="padding-top: 5%;">
         <img src="./me.svg" width="300px">
         </div>
-        <div class="column is-full-width" style="float: right; padding-right: 20%; padding-top: 5%;">
+        <div class="column" style="float: right; padding-right: 10%; margin-top: 20%;">
         <h1 class="head"> Hey, I'm 
             <h1 id="name">Kelly.</h1>
         </div>
@@ -42,6 +58,8 @@
                 Experienced in HTML, CSS, Bulma, Bootstrap, Javascript, and jQuery.
                 Familiar with Python, Django, Node.js, Sass, and Firebase.
             </p>
+
+            <p>Check out my <a href="./assets/resume.pdf" target="_blank">resume</a>.</p>
         </div>
 
             <div class="column">
@@ -76,23 +94,32 @@
 
             <!-- icons with links to projects -->
             <div class="card column has-text-centered">   
-        
+                <a href="https://kad1001.github.io/Trivia-Game/">
                 <figure class="green fas fa-dollar-sign icon is-large"></figure>
-         
             <p class="link"> Jeopardy! </p>
+        </a>
             </div>    
        
 
             <div class="card column has-text-centered">
-
+                    <a href="https://train-schedule-e12b0.firebaseapp.com/">
                 <span class="red fas fa-train icon is-large"></span>
                 <p class="link">Train Arrivals</p>
-
+            </a>
             </div>
 
             <div class="card column has-text-centered">
+                <a href="http://www.face-recognition-project-59b34.firebaseapp.com">
                 <i class="orange far fa-smile icon is-large"></i>
                 <p class="link">Emotion Detector</p>
+            </a>
+            </div>
+
+            <div class="card column has-text-centered">
+                    <a href="https://kad1001.github.io/corey-portfolio/">
+                    <i class="violet fas fa-pen icon is-large"></i>
+                    <p class="link">Artist Portfolio</p>
+                        </a>
             </div>
             </div>
         </div>
@@ -100,6 +127,8 @@
         <div class="contact section">
             <h1 class="header">Contact</h1>
             <!-- <div class="column"> -->
+
+
                 <input id="formName" class="input" type="text" placeholder="Name">
                 <input id="email" class="input" type="email" placeholder="Email">
                 <input id="message" class="input" type="text" placeholder="Message">
@@ -123,19 +152,18 @@
           var database = firebase.database();
 
 
-          $("#submit").on("click", function(event) {
-        event.preventDefault();
-        //   record message in firebase
-        var name = $("#formName").val().trim();
-        var email = $("#email").val().trim();
-        var message = $("#message").val().trim();
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            //   record message in firebase
+            var name = $("#formName").val().trim();
+            var email = $("#email").val().trim();
+            var message = $("#message").val().trim();
 
-        database.ref("/contact").append({
-            name: name,
-            email: email,
-            message: message
-        })
-
+            database.ref("/contact").push({
+                name: name,
+                email: email,
+                message: message
+            });
         });
 
 
