@@ -1,3 +1,7 @@
+body{
+  margin: 5%;
+}
+
 .pink {
   color: #F6A1A5;
 }
@@ -38,6 +42,7 @@
   color: #088BBE;
   font-size: 50px;
   font-weight: bold;
+  padding-left: 20px;
   /* float: right; */
 }
 
@@ -46,15 +51,17 @@
   background-color: black;
   padding-top: 2%;
   text-align: center;
+  height: 300px;
 }
 
-.head {
+/* .head {
   color: white;
   font-size: 50px;
   font-weight: bold;
+  /* margin-left: 5%; */
   /* margin-top: 20%; */
   /* font-family: 'Khand', sans-serif; */
-}
+/* } */ 
 
 .projects {
   background-color: #F6A1A5;
@@ -76,6 +83,37 @@ text-align: center;
 
 .social {
   float: right; 
-  padding-right: 4%;
+  padding-right: 20%;
+  margin: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100px;
+  top: 0;
+  right: -10px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+
+#me{
+  position: absolute;
+  margin-right: 50px;
+  padding-right: 50px;
+}
+
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

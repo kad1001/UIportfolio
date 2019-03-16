@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,8 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
     <!-- bulma -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
@@ -21,83 +22,121 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kelly Davis</title>
 </head>
+
 <body>
+
+    <script>
+        // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
+        function autoType(elementClass, typingSpeed){
+              var thhis = $(elementClass);
+              thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+              });
+              thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+              thhis = thhis.find(".text-js");
+              var text = thhis.text().trim().split('');
+              var amntOfChars = text.length;
+              var newString = "";
+              thhis.text("|");
+              setTimeout(function(){
+                thhis.css("opacity",1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for(var i = 0; i < amntOfChars; i++){
+                  (function(i,char){
+                    setTimeout(function() {        
+                      newString += char;
+                      thhis.text(newString);
+                    },i*typingSpeed);
+                  })(i+1,text[i]);
+                }
+              },1500);
+            }
+            
+            $(document).ready(function(){
+              // Now to start autoTyping just call the autoType function with the class of outer div
+              // The second paramter is the speed between each letter is typed.   
+              autoType(".type-js",200);
+            });
+    </script>
+
+
     <div class="top">
         <div class="social">
             <a href="https://github.com/kad1001">
-            <i class="fab fa-github icon red is-medium"></i>
+                <i class="fab fa-github icon red is-medium"></i>
             </a>
-        </div>
-        <div class="social">
+        <!-- </div> -->
+        <!-- <div class="social"> -->
             <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
-            <i class="fab fa-linkedin icon green is-medium"></i>
+                <i class="fab fa-linkedin icon green is-medium"></i>
             </a>
-        </div>
-
-
-        <div class="columns is-flex">
-
-            <div class="column" style="float: right; margin-left: 10%; margin-top: 20%;">
-            <h1 class="head"> Hi, I'm 
-                <h1 id="name">Kelly.</h1>
-            </div>
-
-            <div class="column" style="padding-top: 5%;">
-                <img src="./me.svg" width="300px">
-            </div>
-
-        </div>
-    
+      
+        <img id="me" src="./me.svg" width="200px">
     </div>
 
+        <!-- <div class="container columns is-flex"> -->
 
-        <div class="container section">
-            <div class="columns">
+            <div class="type-js">
+                <h1 id="name"class="head text-js"> Hi, I'm Kelly.</h1>
+            </div>
+
+
+        </div>
+
+    <!-- </div> -->
+
+
+    <div class="container section">
+        <div class="columns">
 
             <div class="column has-text-centered">
-            <h2 class="subtitle is-2">About Me</h2>
-            <p>
-                My background in psychology led me to studying computer science. Earning certificate at front-end full stack web development bootcamp. Experienced in collecting and analyzing data. 
-                Motivated to make information more universally accessible with intuitive front-end design. Aims to explore computer-machine-interaction and user-focused approach to application development. 
-                Experienced in HTML, CSS, Bulma, Bootstrap, Javascript, and jQuery.
-                Familiar with Python, Django, Node.js, Sass, and Firebase.
-            </p>
+                <h2 class="subtitle is-2">About Me</h2>
+                <p>
+                    My background in psychology led me to studying computer science. Earning certificate at front-end
+                    full stack web development bootcamp. Experienced in collecting and analyzing data.
+                    Motivated to make information more universally accessible with intuitive front-end design. Aims to
+                    explore computer-machine-interaction and user-focused approach to application development.
+                    Experienced in HTML, CSS, Bulma, Bootstrap, Javascript, and jQuery.
+                    Familiar with Python, Django, Node.js, Sass, and Firebase.
+                </p>
 
-            <p>Check out my <a href="./assets/resume.pdf" target="_blank">resume</a>.</p>
-        </div>
+                <p>Check out my <a href="./assets/resume.pdf" target="_blank">resume</a>.</p>
+            </div>
 
             <div class="column">
 
-            <h2 class="subtitle is-2 has-text-centered">Experience</h2>
+                <h2 class="subtitle is-2 has-text-centered">Experience</h2>
 
-            <div>
-                <h1 class="job">Ground Energy Support</h1>
-                <p>Working on small business’ website using HTML, CSS (Bulma), JavaScript, and Python.
-                    </p>          
-            </div>
+                <div>
+                    <h1 class="job">Ground Energy Support</h1>
+                    <p>Working on small business’ website using HTML, CSS (Bulma), JavaScript, and Python.
+                    </p>
+                </div>
 
-            <div>
-                <h1 class="job">Painting Instructor</h1>
-                <p>Instructor at popular paint-n-sip bar.</p>
+                <div>
+                    <h1 class="job">Painting Instructor</h1>
+                    <p>Instructor at popular paint-n-sip bar.</p>
 
-            </div>
+                </div>
 
 
-            <h2 class="subtitle is-2 has-text-centered">Education</h2>
-            <p class="school">University of New Hampshire</p>
-            <p>2016-2018</p>
-            <p>Bachelor of Arts: Psychology</p>
+                <h2 class="subtitle is-2 has-text-centered">Education</h2>
+                <p class="school">University of New Hampshire</p>
+                <p>2016-2018</p>
+                <p>Bachelor of Arts: Psychology</p>
             </div>
         </div>
-        </div>
+    </div>
 
-        <div class="projects section">
+    <div class="projects section">
             <h1 class="header">Projects</h1>
             <br>
             <div class="columns is-flex">
 
-            <!-- icons with links to projects -->
-            <div class="card column has-text-centered">   
+    <!-- icons with links to projects -->
+    <div class="card column has-text-centered">   
                 <a href="https://kad1001.github.io/Trivia-Game/">
                 <figure class="green fas fa-dollar-sign icon is-large"></figure>
             <p class="link"> Jeopardy! </p>
@@ -138,45 +177,46 @@
             <i class=""></i>
 
 
-<!-- 
+    <!-- 
             <div class="card column has-text-centered">
                     <a href="https://kad1001.github.io/corey-portfolio/">
                     <i class="violet fas fa-pen icon is-large"></i>
                     <p class="link">Artist Portfolio</p>
                         </a>
             </div> -->
-            </div>
-        </div>
+ </div>
+</div>
+        
 
-        <div class="contact section">
-            <h1 class="header">Contact</h1>
-            <!-- <div class="column"> -->
+    <div class="contact section">
+        <h1 class="header">Contact</h1>
+      <div class="column">
 
 
-                <input id="formName" class="input" type="text" placeholder="Name">
-                <input id="email" class="input" type="email" placeholder="Email">
-                <input id="message" class="input" type="text" placeholder="Message">
+        <input id="formName" class="input" type="text" placeholder="Name">
+        <input id="email" class="input" type="email" placeholder="Email">
+        <input id="message" class="input" type="text" placeholder="Message">
 
-                <button id="submit" class="button">Send</button>
-            <!-- </div> -->
-        </div>
+        <button id="submit" class="button">Send</button>
+        <!-- </div> -->
+    </div>
 
-        <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
             apiKey: "AIzaSyA89XuZ-eLgD-4Is-lpQ_mJCUGxp7A00N0",
             authDomain: "uiportfolio-169be.firebaseapp.com",
             databaseURL: "https://uiportfolio-169be.firebaseio.com",
             projectId: "uiportfolio-169be",
             storageBucket: "",
             messagingSenderId: "864575535101"
-          };
-          firebase.initializeApp(config);
-          var database = firebase.database();
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
 
 
-        $("#submit").on("click", function(event) {
+        $("#submit").on("click", function (event) {
             event.preventDefault();
             //   record message in firebase
             var name = $("#formName").val().trim();
@@ -190,8 +230,11 @@
             });
         });
 
-
-        </script>
+        // $("#swi").change(function(){
+        //     console.log("switched!");
+        // })
+    </script>
 
 </body>
+
 </html>
