@@ -4,26 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- css -->
     <link rel="stylesheet" href="./assets/style.css">
-
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
     <!-- bulma -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <!-- font awesome icons -->
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kelly Davis</title>
 </head>
 
 <body>
+    <style>
+
+        .section{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box{
+            /* margin: 0.5%; */
+            text-align: center;
+            background-color: #172869;
+            color: white;
+            height: 240px;
+            width: 300px;
+        }
+
+    </style>
 
     <script>
         // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
@@ -63,30 +75,88 @@
 
 
     <div class="top">
+            <div class="type-js">
+                    <h1 id="name"class="head text-js"> Hi, I'm Kelly.</h1>
+                </div>
+        <!-- LINKS -->
         <div class="social">
             <a href="https://github.com/kad1001">
-                <i class="fab fa-github icon red is-medium"></i>
+                <i class="fab fa-github icon is-medium red"></i>
             </a>
-        <!-- </div> -->
-        <!-- <div class="social"> -->
             <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
                 <i class="fab fa-linkedin icon green is-medium"></i>
             </a>
-      
-        <img id="me" src="./me.svg" width="200px">
+            <!-- PHOTO -->
+      <div id="img-div">
+        <img id="me" src="./me.svg" width="160px">
+    </div>
     </div>
 
-        <!-- <div class="container columns is-flex"> -->
 
-            <div class="type-js">
-                <h1 id="name"class="head text-js"> Hi, I'm Kelly.</h1>
+
+    </div>
+
+
+    <div class="projects">
+        <h1 class="header">Projects</h1>
+    <div class="columns section">
+
+        <div class="column">
+        <!-- icons with links to projects -->
+        <div class="box">   
+            <a href="https://kad1001.github.io/Trivia-Game/" target="_blank">
+            <i class="green fas fa-dollar-sign icon is-large"></i>
+        <p class="link"> Jeopardy! </p>
+            </a>
+            <a href="https://github.com/kad1001/Trivia-Game">Code</a>
+        </div>    
+        
+
+            <div class="box">
+                <a href="https://train-schedule-e12b0.firebaseapp.com/" target="_blank">
+                <span class="red fas fa-train icon is-large"></span>
+                <p class="link">Train Arrivals</p>        </a>
+                <a href="https://github.com/kad1001/train-arrivals">Code</a>
+    
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="box">
+                <a href="https://kad1001.github.io/face-practice/" target="_blank">
+                    <i class="orange far fa-smile icon is-large"></i>
+                <p class="link">Emotion Detector</p>
+                <a href='https://github.com/kad1001/face-practice'>Code</a>
+            </a>
             </div>
 
 
+            <div class="box">
+                <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
+                    <i class="pink fas fa-robot icon is-large"></i>
+                <p class="link">Node.js + API Bot</p>
+            </a>
+            </div>
         </div>
+        <div class="column">
 
-    <!-- </div> -->
-
+            <div class="box">
+                <a href="https://github.com/kad1001/shopme" target="_blank">
+                    <i class="red fas fa-shopping-cart icon is-large"></i>
+                <p class="link">ShopMe</p>
+            </a>
+            </div>
+            </div>
+        </div>
+    <!-- 
+            <div class="card column has-text-centered">
+                    <a href="https://kad1001.github.io/corey-portfolio/">
+                    <i class="violet fas fa-pen icon is-large"></i>
+                    <p class="link">Artist Portfolio</p>
+                        </a>
+            </div> -->
+ </div>
+</div>
 
     <div class="container section">
         <div class="columns">
@@ -106,7 +176,6 @@
             </div>
 
             <div class="column">
-
                 <h2 class="subtitle is-2 has-text-centered">Experience</h2>
 
                 <div>
@@ -118,9 +187,7 @@
                 <div>
                     <h1 class="job">Painting Instructor</h1>
                     <p>Instructor at popular paint-n-sip bar.</p>
-
                 </div>
-
 
                 <h2 class="subtitle is-2 has-text-centered">Education</h2>
                 <p class="school">University of New Hampshire</p>
@@ -130,62 +197,7 @@
         </div>
     </div>
 
-    <div class="projects section">
-            <h1 class="header">Projects</h1>
-            <br>
-            <div class="columns is-flex">
 
-    <!-- icons with links to projects -->
-    <div class="card column has-text-centered">   
-                <a href="https://kad1001.github.io/Trivia-Game/">
-                <figure class="green fas fa-dollar-sign icon is-large"></figure>
-            <p class="link"> Jeopardy! </p>
-                </a>
-                <a href="https://github.com/kad1001/Trivia-Game">Code</a>
-            </div>    
-       
-
-            <div class="card column has-text-centered">
-                    <a href="https://train-schedule-e12b0.firebaseapp.com/">
-                <span class="red fas fa-train icon is-large"></span>
-                <p class="link">Train Arrivals</p>
-                <a href="https://github.com/kad1001/train-arrivals">Code</a>
-            </a>
-            </div>
-
-            <div class="card column has-text-centered">
-                <a href="https://kad1001.github.io/face-practice/">
-                    <i class="orange far fa-smile icon is-large"></i>
-                <p class="link">Emotion Detector</p>
-                <a href='https://github.com/kad1001/face-practice'>Code</a>
-            </a>
-            </div>
-
-            <div class="card column has-text-centered">
-                <a href="https://github.com/kad1001/node-liri-bot">
-                    <i class="pink fas fa-robot icon is-large"></i>
-                <p class="link">Emotion Detector</p>
-            </a>
-            </div>
-
-            <div class="card column has-text-centered">
-                <a href="https://github.com/kad1001/shopme">
-                    <i class="red fas fa-shopping-cart icon is-large"></i>
-                <p class="link">ShopMe</p>
-            </a>
-            </div>
-            <i class=""></i>
-
-
-    <!-- 
-            <div class="card column has-text-centered">
-                    <a href="https://kad1001.github.io/corey-portfolio/">
-                    <i class="violet fas fa-pen icon is-large"></i>
-                    <p class="link">Artist Portfolio</p>
-                        </a>
-            </div> -->
- </div>
-</div>
         
 
     <div class="contact section">
@@ -229,10 +241,6 @@
                 message: message
             });
         });
-
-        // $("#swi").change(function(){
-        //     console.log("switched!");
-        // })
     </script>
 
 </body>
