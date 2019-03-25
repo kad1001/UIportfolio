@@ -1,248 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet" /> -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- bulma -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"/>
     <!-- font awesome icons -->
     <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Kelly Davis</title>
-</head>
+  </head>
 
-<body>
-    <style>
+  <body>
+    <!-- <script>
+      // TYPE DISPLAY
+      // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
+      function autoType(elementClass, typingSpeed) {
+        var thhis = $(elementClass);
+        thhis.css({
+          position: "relative",
+          display: "inline-block"
+        });
+        thhis.prepend(
+          '<div class="cursor" style="right: initial; left:0;"></div>'
+        );
+        thhis = thhis.find(".text-js");
+        var text = thhis
+          .text()
+          .trim()
+          .split("");
+        var amntOfChars = text.length;
+        var newString = "";
+        thhis.text("|");
+        setTimeout(function() {
+          thhis.css("opacity", 1);
+          thhis.prev().removeAttr("style");
+          thhis.text("");
+          for (var i = 0; i < amntOfChars; i++) {
+            (function(i, char) {
+              setTimeout(function() {
+                newString += char;
+                thhis.text(newString);
+              }, i * typingSpeed);
+            })(i + 1, text[i]);
+          }
+        }, 1500);
+      }
 
-        .section{
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .box{
-            /* margin: 0.5%; */
-            text-align: center;
-            background-color: #172869;
-            color: white;
-            height: 240px;
-            width: 300px;
-        }
+      $(document).ready(function() {
+        // Now to start autoTyping just call the autoType function with the class of outer div
+        // The second paramter is the speed between each letter is typed.
+        autoType(".type-js", 200);
+      });
+    </script> -->
+<style>
+/* .h {
+  display: none;
+} */
 
-    </style>
+</style>
 
-    <script>
-        // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
-        function autoType(elementClass, typingSpeed){
-              var thhis = $(elementClass);
-              thhis.css({
-                "position": "relative",
-                "display": "inline-block"
-              });
-              thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
-              thhis = thhis.find(".text-js");
-              var text = thhis.text().trim().split('');
-              var amntOfChars = text.length;
-              var newString = "";
-              thhis.text("|");
-              setTimeout(function(){
-                thhis.css("opacity",1);
-                thhis.prev().removeAttr("style");
-                thhis.text("");
-                for(var i = 0; i < amntOfChars; i++){
-                  (function(i,char){
-                    setTimeout(function() {        
-                      newString += char;
-                      thhis.text(newString);
-                    },i*typingSpeed);
-                  })(i+1,text[i]);
-                }
-              },1500);
-            }
-            
-            $(document).ready(function(){
-              // Now to start autoTyping just call the autoType function with the class of outer div
-              // The second paramter is the speed between each letter is typed.   
-              autoType(".type-js",200);
-            });
-    </script>
+    <div class="top svg">
+      <div class="type-js">
+        <h1 id="name" class="head text-js">Hi, I'm Kelly.</h1>
+      </div>
+      <!-- LINKS -->
+      <div class="social">
+        <a href="https://github.com/kad1001">
+          <i class="fab fa-github icon is-medium red"></i>
+        </a>
 
 
-    <div class="top">
-            <div class="type-js">
-                    <h1 id="name"class="head text-js"> Hi, I'm Kelly.</h1>
-                </div>
-        <!-- LINKS -->
-        <div class="social">
-            <a href="https://github.com/kad1001">
-                <i class="fab fa-github icon is-medium red"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
-                <i class="fab fa-linkedin icon green is-medium"></i>
-            </a>
-            <!-- PHOTO -->
-      <div id="img-div">
-        <img id="me" src="./me.svg" width="160px">
-    </div>
+        <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
+          <i class="fab fa-linkedin icon green is-medium"></i>
+        </a>
+        <!-- PHOTO -->
+        <div id="img-div">
+          <img id="me" src="./me.svg" width="160px" />
+        </div>
+      </div>
     </div>
 
+    <div class="projects container">
+      <h1 class="header">Projects</h1>
+      <div class="columns section">
 
 
-    </div>
-
-
-    <div class="projects">
-        <h1 class="header">Projects</h1>
-    <div class="columns section">
 
         <div class="column">
-        <!-- icons with links to projects -->
-        <div class="box">   
+            <div class="box">
+                <a href="https://vast-basin-68019.herokuapp.com/" target="_blank">
+                  <i class="fas fa-user-friends icon is-large"></i>
+                  <p >Friend Finder</p>
+                </a>
+                <a href="https://github.com/kad1001/Friend-Finder">
+                <i class="fab fa-github icon is-medium"></i></a>
+              </div>
+
+          <!-- icons with links to projects -->
+          <div class="box q" name="Jeopardy">
+
             <a href="https://kad1001.github.io/Trivia-Game/" target="_blank">
-            <i class="green fas fa-dollar-sign icon is-large"></i>
-        <p class="link"> Jeopardy! </p>
-            </a>
-            <a href="https://github.com/kad1001/Trivia-Game">Code</a>
-        </div>    
-        
 
-            <div class="box">
-                <a href="https://train-schedule-e12b0.firebaseapp.com/" target="_blank">
-                <span class="red fas fa-train icon is-large"></span>
-                <p class="link">Train Arrivals</p>        </a>
-                <a href="https://github.com/kad1001/train-arrivals">Code</a>
-    
-            </div>
+              <i style="width: 100px; height: 100px;"class="green fas fa-dollar-sign icon is-large"></i>
+              <!-- <p class="link" id="jep"></p> -->
+              <p class="h">Jeopardy!</p>
+
+            </a>
+            <a href="https://github.com/kad1001/Trivia-Game">
+              <p class="fab fa-github icon is-medium"></p>
+            </a>
+          </div>
+
+          <div class="box q" name="Train Arrivals">
+            <a
+              href="https://train-schedule-e12b0.firebaseapp.com/"
+              target="_blank">
+              <span class="red fas fa-train icon is-large"></span>
+
+              <p class="h">Train Arrivals</p>
+            </a>
+            <a href="https://github.com/kad1001/train-arrivals">
+              <i class="fab fa-github icon is-medium"></i></a>
+          </div>
         </div>
 
         <div class="column">
-            <div class="box">
-                <a href="https://kad1001.github.io/face-practice/" target="_blank">
-                    <i class="orange far fa-smile icon is-large"></i>
-                <p class="link">Emotion Detector</p>
-                <a href='https://github.com/kad1001/face-practice'>Code</a>
+          <div class="box">
+            <a href="https://kad1001.github.io/face-practice/" target="_blank">
+              <i class="orange far fa-smile icon is-large"></i>
+              <p >Emotion Detector</p>
+              <a href="https://github.com/kad1001/face-practice">Code</a>
             </a>
-            </div>
+          </div>
 
-
-            <div class="box">
-                <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
-                    <i class="pink fas fa-robot icon is-large"></i>
-                <p class="link">Node.js + API Bot</p>
+          <div class="box">
+            <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
+              <i class="pink fas fa-robot icon is-large"></i>
+              <p class="link">Node.js + API Bot</p>
             </a>
-            </div>
+          </div>
+  
+
         </div>
+
         <div class="column">
-
-            <div class="box">
-                <a href="https://github.com/kad1001/shopme" target="_blank">
-                    <i class="red fas fa-shopping-cart icon is-large"></i>
-                <p class="link">ShopMe</p>
-            </a>
-            </div>
-            </div>
+        <div class="box">
+          <a href="https://kad1001.github.io/corey-portfolio/" target="_blank">
+            <i class="violet fas fa-pen icon is-large"></i>
+            <p class="link">Artist Portfolio</p>
+          </a>
         </div>
-    <!-- 
-            <div class="card column has-text-centered">
-                    <a href="https://kad1001.github.io/corey-portfolio/">
-                    <i class="violet fas fa-pen icon is-large"></i>
-                    <p class="link">Artist Portfolio</p>
-                        </a>
-            </div> -->
- </div>
-</div>
+
+
+        <div class="box">
+            <a href="https://github.com/kad1001/shopme" target="_blank">
+              <i class="red fas fa-shopping-cart icon is-large"></i>
+              <p class="link">ShopMe</p>
+            </a>
+          </div>
+     
+        </div>
+     
+      </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
 
     <div class="container section">
-        <div class="columns">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <h2 class="subtitle is-2">About Me</h2>
+          <p>
+            My background in psychology led me to studying computer science.
+            Earning certificate at front-end full stack web development
+            bootcamp. Experienced in collecting and analyzing data. Motivated to
+            make information more universally accessible with intuitive
+            front-end design. Aims to explore computer-machine-interaction and
+            user-focused approach to application development. Experienced in
+            HTML, CSS, Bulma, Bootstrap, Javascript, and jQuery. Familiar with
+            Python, Django, Node.js, Sass, and Firebase.
+          </p>
 
-            <div class="column has-text-centered">
-                <h2 class="subtitle is-2">About Me</h2>
-                <p>
-                    My background in psychology led me to studying computer science. Earning certificate at front-end
-                    full stack web development bootcamp. Experienced in collecting and analyzing data.
-                    Motivated to make information more universally accessible with intuitive front-end design. Aims to
-                    explore computer-machine-interaction and user-focused approach to application development.
-                    Experienced in HTML, CSS, Bulma, Bootstrap, Javascript, and jQuery.
-                    Familiar with Python, Django, Node.js, Sass, and Firebase.
-                </p>
-
-                <p>Check out my <a href="./assets/resume.pdf" target="_blank">resume</a>.</p>
-            </div>
-
-            <div class="column">
-                <h2 class="subtitle is-2 has-text-centered">Experience</h2>
-
-                <div>
-                    <h1 class="job">Ground Energy Support</h1>
-                    <p>Working on small business’ website using HTML, CSS (Bulma), JavaScript, and Python.
-                    </p>
-                </div>
-
-                <div>
-                    <h1 class="job">Painting Instructor</h1>
-                    <p>Instructor at popular paint-n-sip bar.</p>
-                </div>
-
-                <h2 class="subtitle is-2 has-text-centered">Education</h2>
-                <p class="school">University of New Hampshire</p>
-                <p>2016-2018</p>
-                <p>Bachelor of Arts: Psychology</p>
-            </div>
+          <p>
+            Check out my
+            <a href="./assets/resume.pdf" target="_blank">resume</a>.
+          </p>
         </div>
+
+        <div class="column">
+          <h2 class="subtitle is-2 has-text-centered">Experience</h2>
+
+          <div>
+            <h1 class="job">Ground Energy Support</h1>
+            <p>
+              Working on small business’ website using HTML, CSS (Bulma), and
+              JavaScript.
+            </p>
+          </div>
+
+          <div>
+            <h1 class="job">Painting Instructor</h1>
+            <p>Instructor at popular paint-n-sip bar.</p>
+          </div>
+
+          <h2 class="subtitle is-2 has-text-centered">Education</h2>
+          <p class="school">University of New Hampshire</p>
+          <p>2016-2018</p>
+          <p>Bachelor of Arts: Psychology</p>
+        </div>
+      </div>
     </div>
 
-
-        
-
     <div class="contact section">
-        <h1 class="header">Contact</h1>
+      <h1 class="header">Contact</h1>
       <div class="column">
-
-
-        <input id="formName" class="input" type="text" placeholder="Name">
-        <input id="email" class="input" type="email" placeholder="Email">
-        <input id="message" class="input" type="text" placeholder="Message">
+        <input id="formName" class="input" type="text" placeholder="Name" />
+        <input id="email" class="input" type="email" placeholder="Email" />
+        <input id="message" class="input" type="text" placeholder="Message" />
 
         <button id="submit" class="button">Send</button>
         <!-- </div> -->
-    </div>
+      </div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-    <script>
+      <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+      <script>
+
+      // $(".box").hover(function(){
+      //   console.log(this)
+      //   console.log($(this).attr("name"))
+      // })
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyA89XuZ-eLgD-4Is-lpQ_mJCUGxp7A00N0",
-            authDomain: "uiportfolio-169be.firebaseapp.com",
-            databaseURL: "https://uiportfolio-169be.firebaseio.com",
-            projectId: "uiportfolio-169be",
-            storageBucket: "",
-            messagingSenderId: "864575535101"
+          apiKey: "AIzaSyA89XuZ-eLgD-4Is-lpQ_mJCUGxp7A00N0",
+          authDomain: "uiportfolio-169be.firebaseapp.com",
+          databaseURL: "https://uiportfolio-169be.firebaseio.com",
+          projectId: "uiportfolio-169be",
+          storageBucket: "",
+          messagingSenderId: "864575535101"
         };
         firebase.initializeApp(config);
         var database = firebase.database();
 
+// $(".q").hover(function(){
+//   // var name = $(this).attr('name');
+//   var p = $("p");
+//   console.log(p)
+//   $(this).show(p);
+// }, function(){
+//   // var src = $(this).attr('src');
+//   // console.log(src);
+//   // $(this).empty();
+//   $("p").hide();
+// })
+        $("#submit").on("click", function(event) {
+          event.preventDefault();
+          //   record message in firebase
+          var name = $("#formName")
+            .val()
+            .trim();
+          var email = $("#email")
+            .val()
+            .trim();
+          var message = $("#message")
+            .val()
+            .trim();
 
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            //   record message in firebase
-            var name = $("#formName").val().trim();
-            var email = $("#email").val().trim();
-            var message = $("#message").val().trim();
-
-            database.ref("/contact").push({
-                name: name,
-                email: email,
-                message: message
-            });
+          database.ref("/contact").push({
+            name: name,
+            email: email,
+            message: message
+          });
         });
-    </script>
+      </script>
 
-</body>
-
+    </div>
+  </body>
 </html>
