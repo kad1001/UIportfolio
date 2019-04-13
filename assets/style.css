@@ -55,9 +55,11 @@ img {
 #name {
   text-align: center;
   /* color: #088BBE; */
-  color: white;
+  color: #21285F; /* purple */
   font-size: 75px;
   padding-left: 20px;
+  font-family: 'Abril Fatface', cursive;
+
   /* font-display:  */
   /* float: right; */
 }
@@ -65,12 +67,6 @@ img {
 /* TOP SECTION */
 .top {
   width: 100%;
-  /* background-color: black; */
-  background-image: linear-gradient(
-    to right,
-    #2e183b,
-    black
-  ); /* deep purple gradient  */
   text-align: center;
   height: 300px;
   position: sticky;
@@ -89,11 +85,18 @@ img {
   /* color: white; */
   font-size: 70px;
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
+
 }
 
 .link {
-  color: white;
-  opacity: 0.9;
+  background-color: #ee82aa; /* light pink */ 
+  color: #21285F; /* purple */
+  font-size: 30px;
+  font-family: 'Abril Fatface', cursive;
+  border: 5px solid #21285F; /* purple */
+
+
 }
 
 .contact {
@@ -102,8 +105,8 @@ img {
 
 .social {
   float: right;
-  margin-top: 0px;
   padding: 2%;
+  display: flex;
   /* margin: 20px; */
 }
 
@@ -151,10 +154,14 @@ img {
     display: flex;
     flex-direction: row;
   } */
+
+  /* .top {
+    height: fit-content
+  } */
   .social {
-    /* display: inline-block; */
-    width: 100%;
-    height: auto;
+    justify-content: center;
+    /* width: 100%; */
+    /* display: inline; */
   }
   .header {
     display: block;
