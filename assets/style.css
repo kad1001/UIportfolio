@@ -5,8 +5,12 @@ body {
 .box {
   /* margin: 0.5%; */
   text-align: center;
-  background-color: #172869;
+  color: #172869;
   color: white;
+}
+
+img {
+  position: relative;
 }
 
 /* COLORS */
@@ -67,9 +71,9 @@ body {
     #2e183b,
     black
   ); /* deep purple gradient  */
-  padding-top: 2%;
   text-align: center;
   height: 300px;
+  position: sticky;
 }
 
 /* PROJECTS */
@@ -88,7 +92,6 @@ body {
 }
 
 .link {
-  font-size: 45px;
   color: white;
   opacity: 0.9;
 }
@@ -161,6 +164,8 @@ body {
     visibility: hidden;
   }
 }
+
+
 
 .skill {
   margin-top: 40px;

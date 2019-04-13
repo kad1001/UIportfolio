@@ -1,264 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/style.css" />
-    <!-- google fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet" /> -->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <!-- bulma -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
-    />
-    <!-- font awesome icons -->
-    <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kelly Davis</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/style.css" />
 
-  <body>
-    <!-- <script>
-      // TYPE DISPLAY
-      // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
-      function autoType(elementClass, typingSpeed) {
-        var thhis = $(elementClass);
-        thhis.css({
-          position: "relative",
-          display: "inline-block"
-        });
-        thhis.prepend(
-          '<div class="cursor" style="right: initial; left:0;"></div>'
-        );
-        thhis = thhis.find(".text-js");
-        var text = thhis
-          .text()
-          .trim()
-          .split("");
-        var amntOfChars = text.length;
-        var newString = "";
-        thhis.text("|");
-        setTimeout(function() {
-          thhis.css("opacity", 1);
-          thhis.prev().removeAttr("style");
-          thhis.text("");
-          for (var i = 0; i < amntOfChars; i++) {
-            (function(i, char) {
-              setTimeout(function() {
-                newString += char;
-                thhis.text(newString);
-              }, i * typingSpeed);
-            })(i + 1, text[i]);
-          }
-        }, 1500);
-      }
 
-      $(document).ready(function() {
-        // Now to start autoTyping just call the autoType function with the class of outer div
-        // The second paramter is the speed between each letter is typed.
-        autoType(".type-js", 200);
+  <!-- google fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet" /> -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <!-- javascript -->
+
+  <script src="main.js"></script>
+  <!-- bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <!-- font awesome icons -->
+  <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Kelly Davis</title>
+</head>
+
+<body>
+  <script>
+    $(window).load(function(){
+      $("a").attr("target", "_blank");
+
+    });
+    // TYPE DISPLAY
+    // credit: https://codepen.io/ConnorGaunt/pen/OReXZB
+    function autoType(elementClass, typingSpeed) {
+      var thhis = $(elementClass);
+      thhis.css({
+        position: "relative",
+        display: "inline-block"
       });
-    </script> -->
-    <style>
-      /* .h {
+      thhis.prepend(
+        '<div class="cursor" style="right: initial; left:0;"></div>'
+      );
+      thhis = thhis.find(".text-js");
+      var text = thhis
+        .text()
+        .trim()
+        .split("");
+      var amntOfChars = text.length;
+      var newString = "";
+      thhis.text("|");
+      setTimeout(function () {
+        thhis.css("opacity", 1);
+        thhis.prev().removeAttr("style");
+        thhis.text("");
+        for (var i = 0; i < amntOfChars; i++) {
+          (function (i, char) {
+            setTimeout(function () {
+              newString += char;
+              thhis.text(newString);
+            }, i * typingSpeed);
+          })(i + 1, text[i]);
+        }
+      }, 1500);
+    }
+
+    $(document).ready(function () {
+      $(".fa-node-js").attr("title", "Node.js")
+
+      // Now to start autoTyping just call the autoType function with the class of outer div
+      // The second paramter is the speed between each letter is typed.
+      autoType(".type-js", 200);
+
+    });
+
+
+  </script>
+  <style>
+
+    body {
+      background-color: #079eae;;
+    }
+
+    .box {
+    
+      background-color: #079eae;
+      border: 20px solid #265F7A;
+    }
+
+    .projects {
+      background-color: #f98613;
+    }
+
+    .icon {
+      
+      color: #E76f93 ;
+      margin: 2%;
+      border-radius: 15%;
+    }
+
+    .fa-html5  {
+      color: #e64c19;
+      background-color: white;
+    }
+
+    .fa-node-js {
+      background-color: #265F7A;
+      color: #ca8a1d;
+    }
+
+    .fa-css3-alt {
+      /* color: #E76f93 ; */
+      background-color: #265F7A;
+    }
+    /* .h {
   display: none;
 } */
-    </style>
+  </style>
 
-    <div class="top svg">
-      <div class="type-js">
-        <h1 id="name" class="head text-js">Hi, I'm Kelly.</h1>
-      </div>
-      <!-- LINKS -->
-      <div class="social">
-        <a href="https://github.com/kad1001">
-          <i class="fab fa-github icon is-medium red"></i>
-        </a>
 
-        <a href="https://www.linkedin.com/in/kelly-davis-573316a9/">
-          <i class="fab fa-linkedin icon green is-medium"></i>
-        </a>
-        <!-- PHOTO -->
-        <div id="img-div">
-          <img id="me" src="./me.svg" width="160px" />
-        </div>
-      </div>
+  <!-- TYPE JS -->
+  <div class="top svg">
+    <div class="type-js">
+      <h1 id="name" class="head text-js">Hi, I'm Kelly.</h1>
     </div>
 
-    <div class="projects container">
-      <h1 class="header">Projects</h1>
-      <div class="columns section">
-        <div class="column">
-          <div class="box">
-            <a href="https://vast-basin-68019.herokuapp.com/" target="_blank">
-              <i class="fas fa-user-friends icon is-large"></i>
-              <p>Friend Finder</p>
-            </a>
-            <a href="https://github.com/kad1001/Friend-Finder">
-              <i class="fab fa-github icon is-medium"></i
-            ></a>
-          </div>
+    <!-- LINKS -->
+    <div class="social">
+      <a href="https://github.com/kad1001">
+        <i class="fab fa-github icon is-medium red"></i>
+      </a>
 
-          <!-- icons with links to projects -->
-          <div class="box q" name="Jeopardy">
-            <a href="https://kad1001.github.io/Trivia-Game/" target="_blank">
-              <i
-                style="width: 100px; height: 100px;"
-                class="green fas fa-dollar-sign icon is-large"
-              ></i>
-              <!-- <p class="link" id="jep"></p> -->
-              <p class="h">Jeopardy!</p>
-            </a>
-            <a href="https://github.com/kad1001/Trivia-Game">
-              <p class="fab fa-github icon is-medium"></p>
-            </a>
-          </div>
-
-          <div class="box q" name="Train Arrivals">
-            <a
-              href="https://train-schedule-e12b0.firebaseapp.com/"
-              target="_blank"
-            >
-              <span class="red fas fa-train icon is-large"></span>
-
-              <p class="h">Train Arrivals</p>
-            </a>
-            <a href="https://github.com/kad1001/train-arrivals">
-              <i class="fab fa-github icon is-medium"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="box">
-            <a href="https://nameless-tor-83631.herokuapp.com" target="_blank">
-              <i class="blue fas fa-hamburger icon is-large"></i>
-              <p>Burger Builder</p>
-              <a href="https://kad1001.github.io/burger-app/">
-                <p class="fab fa-github icon is-medium"></p>
-              </a>
-            </a>
-          </div>
-
-          <div class="box">
-            <a href="https://kad1001.github.io/face-practice/" target="_blank">
-              <i class="orange far fa-smile icon is-large"></i>
-              <p>Emotion Detector</p>
-              <a href="https://github.com/kad1001/face-practice">Code</a>
-            </a>
-          </div>
-
-          <div class="box">
-            <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
-              <i class="pink fas fa-robot icon is-large"></i>
-              <p class="link">Node.js + API Bot</p>
-            </a>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="box">
-            <a
-              href="https://kad1001.github.io/corey-portfolio/"
-              target="_blank"
-            >
-              <i class="violet fas fa-pen icon is-large"></i>
-              <p class="link">Artist Portfolio</p>
-            </a>
-          </div>
-
-          <div class="box">
-            <a href="https://github.com/kad1001/shopme" target="_blank">
-              <i class="red fas fa-shopping-cart icon is-large"></i>
-              <p class="link">ShopMe</p>
-            </a>
-          </div>
-
-          <div class="box">
-            <a
-              href="https://apple-cobbler-47548.herokuapp.com/"
-              target="_blank"
-            >
-              <img src="assets/naybo.png" />
-              <p class="link">Naybo</p>
-            </a>
-
-            <a
-              href="https://github.com/sullyseipold/project-two"
-              target="_blank"
-            >
-              <i class="fab fa-github icon is-medium"></i>
-            </a>
-          </div>
-        </div>
+      <a href="https://www.linkedin.com/in/kelly-davis-573316a9/" target="_blank">
+        <i class="fab fa-linkedin icon green is-medium"></i>
+      </a>
+      <!-- PHOTO -->
+      <div id="img-div">
+        <img id="me" src="./me.svg" width="160px" />
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <h1 class="header">Skills</h1>
-      <div class="columns container is-fluid is-multilined">
-        <div class="column">
-          <figure class="image is-128x128">
-            <img class="skill" src="skills/html.png" />
-          </figure>
+  <div class="projects container">
+    <h1 class="header">Projects</h1>
+    <div class="columns section">
+      <div class="column">
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/js.png" />
-          </figure>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/heroku.png" />
-          </figure>
+        <div class="box">
+          <a href="https://vast-basin-68019.herokuapp.com/" target="_blank">
+            <i class="fas fa-user-friends icon is-large"></i>
+            <p>Friend Finder</p>
+          </a>
+          <a href="https://github.com/kad1001/Friend-Finder">
+            <i class="fas fa-code icon is-medium"></i></a>
+
+                        <!-- JS -->
+                        <p class="fab fa-js icon is-medium" style="color: #F0DB50;"></p>
+            <!-- CSS -->
+                        <p class="fab fa-css3-alt icon is-medium"></p>
         </div>
-        <div class="column">
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/aws.png" />
-          </figure>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/sequelize.png" />
-          </figure>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/expressjs.png" />
-          </figure>
+
+
+
+        <!-- icons with links to projects -->
+        <div class="box q" name="Jeopardy">
+          <a href="https://kad1001.github.io/Trivia-Game/" target="_blank">
+            <i style="width: 100px; height: 100px;" class="green fas fa-dollar-sign icon is-large"></i>
+            <!-- <p class="link" id="jep"></p> -->
+            <p class="h">Jeopardy!</p>
+          </a>
+          <!-- Github -->
+          <a href="https://github.com/kad1001/Trivia-Game">
+            <p class="fab fa-github icon is-medium"></p>
+          </a>
+
+          <!-- HTML, JS, jquery -->
+          <i class="fab fa-html5 icon is-medium"></i>
+
         </div>
-        <div class="column">
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/handlebars.png" />
-          </figure>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/nodejs.jpg" />
-          </figure>
+        <div class="box q" name="Train Arrivals">
+          <a href="https://train-schedule-e12b0.firebaseapp.com/" target="_blank">
+            <span class="red fas fa-train icon is-large"></span>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/css3.png" />
-          </figure>
-        </div>
-        <div class="column">
-          <figure class="image is-128x128">
-            <img   class="skill" src="skills/jquery.jpg" />
-          </figure>
+            <p class="h">Train Arrivals</p>
+          </a>
 
-          <figure class="image is-128x128">
-            <img class="skill" src="skills/wordpress.png" />
-          </figure>
+          <!-- Github -->
+          <a href="https://github.com/kad1001/train-arrivals">
+            <!-- Code icon -->
+            <i class="fas fa-code icon is-medium"></i></a>
 
-          <figure class="image is-128x128">
-            <img  class="skill" src="skills/mysql.png" />
-          </figure>
-        </div>
-        <div class="column">
-          <figure class="image is-128x128">
-            <img class="skill" src="skills/bulma.png" />
-          </figure>
+            <i class="fab fa-html5 icon is-medium"></i>
+
         </div>
       </div>
+
+
+
+      <!-- Burger Builder -->
+      <!-- JS, Handlebars, Bootstrap, node, heroku, mysql, express.js -->
+      <div class="column">
+        <div class="box">
+          <a href="https://nameless-tor-83631.herokuapp.com" target="_blank">
+            <i class="blue fas fa-hamburger icon is-large"></i>
+            <p class="link">Burger Builder</p>
+
+            <!-- github icon & code -->
+            <a href="https://github.com/kad1001/burger-app">
+           <!-- Code icon -->
+           <i class="fas fa-code icon is-medium"></i></a>
+            </a>
+
+            <!-- javascript icon -->
+            <p class="fab fa-js icon is-medium" style="color: #F0DB50;"></p>
+
+
+          <!-- Node.js icon -->
+          <i class="fab fa-node-js icon is-medium"></i>
+
+          </a>
+        </div>
+
+
+
+        <!-- Emotion Detection -->
+        <div class="box">
+          <a href="https://kad1001.github.io/face-practice/" target="_blank">
+            <i class="orange far fa-smile icon is-large"></i>
+            <p>Emotion Detector</p>
+
+            <!-- Github -->
+            <a href="https://github.com/kad1001/face-practice">
+           <!-- Code icon -->
+           <i class="fas fa-code icon is-medium"></i></a>
+
+            </a>
+
+            <!-- HTML -->
+            <i class="fab fa-html5 icon is-medium"></i>
+
+            <!-- JS -->
+            <p class="fab fa-js icon is-medium" style="color: #F0DB50;"></p>
+
+
+          </a>
+        </div>
+
+
+
+        <div class="box">
+          <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
+            <i class="pink fas fa-robot icon is-large"></i>
+            <p class="link">Liri Bot</p>
+            
+          </a>
+
+
+          <!-- Node.js icon -->
+          <i class="fab fa-node-js icon is-medium"></i>
+        </div>
+      </div>
+
+
+
+      <div class="column">
+        <div class="box">
+          <a href="https://kad1001.github.io/corey-portfolio/" target="_blank">
+            <i class="violet fas fa-pen icon is-large"></i>
+            <p class="link">Artist Portfolio</p>
+          </a>
+           <!-- Code icon -->
+           <i class="fas fa-code icon is-medium"></i></a>
+          <i class="fab fa-html5 icon is-medium"></i>
+
+        </div>
+
+        <div class="box">
+          <a href="https://github.com/kad1001/shopme" target="_blank">
+            <i class="red fas fa-shopping-cart icon is-large"></i>
+            <p class="link">ShopMe</p>
+          </a>
+        </div>
+
+
+
+        <div class="box">
+          <a href="https://apple-cobbler-47548.herokuapp.com/" target="_blank">
+            <img src="assets/naybo.png" />
+            <p class="link">Naybo</p>
+          </a>
+
+          <a href="https://github.com/sullyseipold/project-two" target="_blank">
+           <!-- Code icon -->
+           <i class="fas fa-code icon is-medium"></i></a>   
+          <i class="fab fa-node-js icon is-medium"></i>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
 
     <div class="container section">
       <div class="columns">
@@ -348,7 +394,7 @@
         //   // $(this).empty();
         //   $("p").hide();
         // })
-        $("#submit").on("click", function(event) {
+        $("#submit").on("click", function (event) {
           event.preventDefault();
           //   record message in firebase
           var name = $("#formName")
@@ -369,5 +415,6 @@
         });
       </script>
     </div>
-  </body>
+</body>
+
 </html>
