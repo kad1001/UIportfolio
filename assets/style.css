@@ -76,16 +76,19 @@ img {
 .projects {
   /* background-color: #F6A1A5; */
   color: #172869;
-  background-color: white;
+  /* background-color: white; */
   /* padding: 10%; */
+}
+
+hr {
+  background-color: #172869;
 }
 
 /* FONTS */
 .header {
-  /* color: white; */
-  font-size: 70px;
+  font-size: 50px;
   text-align: center;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Abril Fatface';
 
 }
 
@@ -95,8 +98,6 @@ img {
   font-size: 30px;
   font-family: 'Abril Fatface', cursive;
   border: 5px solid #21285F; /* purple */
-
-
 }
 
 .contact {
@@ -107,9 +108,12 @@ img {
   float: right;
   padding: 2%;
   display: flex;
-  /* margin: 20px; */
 }
 
+
+.fa-react {
+  background-color: white;
+}
 /* TYPE DISPLAY */
 .text-js { 
   opacity: 0;
@@ -143,29 +147,12 @@ img {
 
 /* MOBILE FORMATTING */
 @media screen and (max-width: 641px) {
-  /* .header a {
-    float: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  .header-right {
-    float: none;
-    display: flex;
-    flex-direction: row;
-  } */
 
-  /* .top {
-    height: fit-content
-  } */
   .social {
     justify-content: center;
-    /* width: 100%; */
-    /* display: inline; */
   }
   .header {
     display: block;
-    height: auto;
   }
   #img-div {
     visibility: hidden;
@@ -177,15 +164,3 @@ img {
 .skill {
   margin-top: 40px;
 }
-/* #social{
-    float: none;
-    display: block;
-    width: 100%;
-    /* size: 60%; */
-
-/* #me{
-  position: absolute;
-  margin-right: 50px;
-  padding-right: 50px;
-} */
-
