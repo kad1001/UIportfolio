@@ -68,7 +68,7 @@ img {
 .top {
   width: 100%;
   text-align: center;
-  height: 300px;
+  /* height: 300px; */
   position: sticky;
 }
 
@@ -88,16 +88,20 @@ hr {
 .header {
   font-size: 50px;
   text-align: center;
-  font-family: 'Abril Fatface';
-
+  /* font-family: 'Abril Fatface'; */
+  font-family: 'Josefin Sans', sans-serif;
 }
+
 
 .link {
   background-color: #ee82aa; /* light pink */ 
   color: #21285F; /* purple */
   font-size: 30px;
-  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Josefin Sans', sans-serif;
+
   border: 5px solid #21285F; /* purple */
+  padding: 5px;
 }
 
 .contact {
@@ -105,9 +109,8 @@ hr {
 }
 
 .social {
-  float: right;
-  padding: 2%;
-  display: flex;
+  /* position: fixed; */
+  /* height: 300px; */
 }
 
 
@@ -117,6 +120,11 @@ hr {
 /* TYPE DISPLAY */
 .text-js { 
   opacity: 0;
+
+}
+
+.type-js {
+  width: 100%;
 }
 .cursor {
   display: block;
@@ -143,6 +151,13 @@ hr {
 
 #img-div {
   margin-top: 0px;
+}
+
+
+.mediv {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /* MOBILE FORMATTING */

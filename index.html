@@ -7,9 +7,6 @@
   <!-- css -->
   <link rel="stylesheet" href="./assets/style.css" />
 
-
-  <!-- google fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet" /> -->
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
@@ -23,7 +20,7 @@
 
 
   <!-- google font -->
-
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Kelly Davis</title>
@@ -84,7 +81,7 @@
     }
 
     .wow {
-      background-color: #265F7A;
+      /* background-color: #265F7A; */
       color: #079eae;
     }
 
@@ -102,9 +99,9 @@
       text-align: center;
     }
 
-    /* .h {
-  display: none;
-} */
+    .reg {
+      font-family: 'Josefin Sans', sans-serif;
+    }
   </style>
 
 
@@ -114,35 +111,41 @@
       <div class="type-js">
         <h1 id="name" class="head text-js">Hi, I'm Kelly.</h1>
       </div>
+    </div>
 
+    <div class="container mediv">
       <!-- LINKS -->
-      <div class="social wow">
+
+      <!-- <div class="social wow"> -->
+      <div class="container mediv">
         <a href="https://github.com/kad1001">
           <i class="fab fa-github icon is-medium red"></i>
         </a>
 
+
         <a href="https://www.linkedin.com/in/kelly-davis-573316a9/" target="_blank">
           <i class="fab fa-linkedin icon green is-medium"></i>
         </a>
-        <!-- PHOTO -->
-        <div id="img-div">
-          <img id="me" src="./me.svg" width="160px" />
-        </div>
+      </div>
+      <!-- PHOTO -->
+      <div id="img-div">
+        <img id="me" src="./me.svg" width="160px" />
       </div>
     </div>
-
+    <!-- </div> -->
   </div>
 
 
+
+  <br>
 
 
   <div class="container section">
     <div class="projects">
       <h1 class="header">Projects</h1>
 
-      <h3 class="centered">
-        Built with love using
-
+      <h3 class="centered reg">
+        Built with
         <!-- javascript icon -->
         <i class="fab fa-js" style="color: #F0DB50; background-color: black; border: 1px solid black;"></i>
 
@@ -152,19 +155,21 @@
       <div class="columns">
         <div class="column">
 
-            <div class="box">
-                <a href="https://kad1001.github.io/clicky/" target="_blank">
-                  <p class="link">React Clicking Game</p>
-                </a>
-    
-                <!-- Code link -->
-                <a href="https://github.com/kad1001/clicky" target="_blank">
-                  <!-- Code icon -->
-                  <i class="fas fa-code icon is-medium"></i></a>
-                  <!-- React.js -->
-                  <i class="fab fa-react icon is-medium"></i>         
-    
-              </div>
+          <div class="box">
+            <a href="https://kad1001.github.io/clicky/" target="_blank">
+              <p class="link">React Clicking Game</p>
+            </a>
+
+            <!-- Code link -->
+            <a href="https://github.com/kad1001/clicky" target="_blank">
+              <!-- Code icon -->
+              <i class="fas fa-code icon is-medium"></i></a>
+            <!-- React.js -->
+            <i class="fab fa-react icon is-medium"></i>
+            <p class="fab fa-css3-alt icon is-medium"></p>
+
+
+          </div>
 
 
           <div class="box">
@@ -176,6 +181,12 @@
               <i class="fas fa-code icon is-large"></i></a>
             <!-- CSS -->
             <p class="fab fa-css3-alt icon is-medium"></p>
+            <img class="icon is-large expressIcon">
+            <i class="fab fa-node-js icon is-medium nodeIcon"></i>
+            <i class="fab fa-html5 icon is-medium"></i>
+
+
+
           </div>
 
 
@@ -193,6 +204,8 @@
             </a>
             <!-- HTML, JS, jquery -->
             <i class="fab fa-html5 icon is-medium"></i>
+            <!-- CSS -->
+            <p class="fab fa-css3-alt icon is-medium"></p>
           </div>
 
 
@@ -212,26 +225,20 @@
                 <!-- Code icon -->
                 <i class="fas fa-code icon is-medium"></i></a>
             </a>
-
-
             <!-- Node.js icon -->
-            <i class="fab fa-node-js icon is-large"></i>
-
+            <i class="fab fa-node-js icon is-large nodeIcon"></i>
             <!-- Express -->
-            <img id="expressIcon" class="icon is-large">
-
+            <img class="icon is-large expressIcon">
             <!-- Sql -->
-            <img id="mysqlIcon" class="icon is-large">
-
-
+            <img class="icon is-large mysqlIcon">
+            <!-- CSS -->
+            <p class="fab fa-css3-alt icon is-medium"></p>
+            <i class="fab fa-html5 icon is-medium"></i>
             <!-- Handlebars icon -->
-            <img id="handlebarsIcon" class="icon is-large" style="background-color: whitesmoke;">
+            <img class="handlebarsIcon icon is-large" style="background-color: whitesmoke;">
 
             </a>
           </div>
-
-
-
 
           <!-- Emotion Detection -->
           <div class="box">
@@ -247,23 +254,19 @@
             <!-- HTML -->
             <i class="fab fa-html5 icon is-medium"></i>
             <!-- jquery -->
-
-            <img id="jqueryIcon" class="icon is-medium">
-
+            <!-- <img id="jqueryIcon" class="icon is-medium" /> -->
+            <!-- CSS -->
+            <p class="fab fa-css3-alt icon is-medium"></p>
           </div>
-
-
 
           <div class="box">
             <a href="https://github.com/kad1001/node-liri-bot" target="_blank">
               <i class="pink fas fa-robot icon is-large"></i>
               <p class="link">Liri Bot</p>
-
             </a>
 
-
             <!-- Node.js icon -->
-            <i class="fab fa-node-js icon is-medium"></i>
+            <i class="fab fa-node-js icon is-medium nodeIcon"></i>
           </div>
         </div>
 
@@ -278,6 +281,8 @@
             <!-- Code icon -->
             <i class="fas fa-code icon is-medium"></i></a>
             <i class="fab fa-html5 icon is-medium"></i>
+            <p class="fab fa-css3-alt icon is-medium"></p>
+
 
           </div>
 
@@ -286,8 +291,6 @@
               <i class="red fas fa-shopping-cart icon is-large"></i>
               <p class="link">ShopMe</p>
             </a>
-
-
             <!-- Node.js icon -->
             <i class="fab fa-node-js icon is-medium"></i>
           </div>
@@ -305,7 +308,11 @@
               <i class="fas fa-code icon is-medium"></i></a>
             <i class="fab fa-node-js icon is-medium"></i>
             <!-- Sql -->
-            <img id="mysqlIcon" class="icon is-large">
+            <img class="icon is-large mysqlIcon">
+            <img class="icon is-large expressIcon">
+            <img class="handlebarsIcon icon is-large" style="background-color: whitesmoke;">
+
+
 
           </div>
 
@@ -318,10 +325,10 @@
       <div class="columns">
         <div class="column has-text-centered about">
           <h2 class="subtitle is-2 lbfont">About Me</h2>
-          <p class="wow">
+          <p class="has-text-white reg">
             My background in psychology led me to studying computer science.
           </p>
-          <p>
+          <p class="wow reg">
             Earning certificate at front-end full stack web development
             bootcamp. Experienced in collecting and analyzing data. Motivated to
             make information more universally accessible with intuitive
@@ -331,7 +338,7 @@
             Python, Django, Node.js, Sass, and Firebase.
           </p>
 
-          <p class="wow">
+          <p class="wow reg">
             Check out my
             <a href="./assets/resume.pdf" target="_blank">resume</a>.
           </p>
@@ -342,11 +349,11 @@
 
           <div>
             <h1 class="job">
-              <a href="http://groundenergysupport.com/wp/">
+              <a class="reg" href="http://groundenergysupport.com/wp/">
                 Ground Energy Support
               </a>
             </h1>
-            <p>
+            <p class="wow reg">
               Working on small business’ website using HTML, CSS (Bulma), and
               JavaScript.
             </p>
@@ -354,17 +361,17 @@
 
           <h2 class="subtitle is-2 has-text-centered lbfont">Education</h2>
           <p class="school">
-            <a href="https://www.unh.edu/">
+            <a class="reg" href="https://www.unh.edu/">
               University of New Hampshire
             </a>
           </p>
-          <p>2016-2018</p>
-          <p>Bachelor of Arts: Psychology</p>
+          <p class="has-text-white reg">2016-2018</p>
+          <p class="wow reg">Bachelor of Arts: Psychology</p>
         </div>
       </div>
     </div>
 
-    <div class="contact section">
+    <div class="contact section projects">
       <h1 class="header">Contact</h1>
       <div class="columns">
         <div class="column">
@@ -403,17 +410,6 @@
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    // $(".q").hover(function(){
-    //   // var name = $(this).attr('name');
-    //   var p = $("p");
-    //   console.log(p)
-    //   $(this).show(p);
-    // }, function(){
-    //   // var src = $(this).attr('src');
-    //   // console.log(src);
-    //   // $(this).empty();
-    //   $("p").hide();
-    // })
     $("#submit").on("click", function (event) {
       event.preventDefault();
       //   record message in firebase
@@ -437,7 +433,7 @@
   </div>
 
   <!-- props -->
-  <footer>
+  <footer class="footer mediv">
     <a href="https://en.wikipedia.org/wiki/Cornell_5/8/77">
       <i class="fas fa-palette icon"></i>
 

@@ -1,15 +1,15 @@
 $(window).load(function(){
 
-    $("#handlebarsIcon").attr("src", "skills/handlebars.png");
-    $("#htmlIcon").attr("src", "skills/html.png");
-    $("#expressIcon").attr("src", "skills/expressjs.png");
-    $("#expressIcon").attr("title", "Express.js");
+    $(".handlebarsIcon").attr("src", "skills/handlebars.png");
+    $(".htmlIcon").attr("src", "skills/html.png");
+    $(".expressIcon").attr("src", "skills/expressjs.png");
+    $(".expressIcon").attr("title", "Express.js");
 
     $("#firebaseIcon").attr("src", "skills/firebase.jpg");
     $("#jqueryIcon").attr("src", "skills/jquery.jpg");
-    $("#mysqlIcon").attr("src", "skills/mysql.png");
-    $("#nodeIcon").attr("src", "skills/nodejs.jpg");
-    $("#sequelizeIcon").attr("src", "skills/sequelize.png");
+    $(".mysqlIcon").attr("src", "skills/mysql.png");
+    $(".nodeIcon").attr("src", "skills/nodejs.jpg");
+    $(".sequelizeIcon").attr("src", "skills/sequelize.png");
     
     $("a").attr("target", "_blank");
 
